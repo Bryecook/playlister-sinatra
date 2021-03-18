@@ -1,0 +1,15 @@
+<h1>Song Create Page</h1>
+
+<form action = '/songs' method='post'>
+<label>Song Name</label>
+<input type = 'text' name='song_name'>
+</br>
+<label>Artist</label>
+<select name='artist_id'>
+<% @artists.each do |artist| %>
+<option value = <%=artist.id %>> <%= artist.name %> </option>
+<%end%>
+</select>
+</br>
+<input type = "submit" value = "Create Song">
+</form>

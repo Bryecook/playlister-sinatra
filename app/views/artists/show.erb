@@ -6,6 +6,10 @@
     <li> <%=song.name%> </li>
     <% end %>
 </ul>
-
-<% @artist.songs.each do |song|
+<h2> Genre(s): </h2>
+<ul>
+<% @songgenres.each do |object| %> 
+    <li> <%=object.genre.name%> </li>
+    <% end %>
+    </ul>
     

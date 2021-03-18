@@ -7,8 +7,8 @@ class Artist < ActiveRecord::Base
         self.name.downcase.strip
     end
     
-    def find_by_slug(slug)
-        object = Genre.all.select{ |genre| genre.slug == slug}.first
-        object.id
+    def self.find_by_slug(slug)
+        object = Artist.all.select{ |artist| artist.slug == slug}.first
+        object
     end
 end 

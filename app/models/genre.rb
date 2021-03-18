@@ -6,8 +6,8 @@ class Genre < ActiveRecord::Base
         self.name.downcase.strip
     end
 
-    def find_by_slug(slug)
+    def self.find_by_slug(slug)
         object = Genre.all.select{ |genre| genre.slug == slug}.first
-        object.id
+        object
     end
 end 

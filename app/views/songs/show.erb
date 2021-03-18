@@ -1,4 +1,10 @@
 <h1>This is show page</h1>
 <h1> Song Name: <%= @song.name %>  </h1>
 <h2> Artist: <%= @song.artist.name %>  </h2>
+<h2> Genre(s): </h2>
+<ul>
+<% @songgenres.each do |object| %> 
+    <li> <%=object.genre.name%> </li>
+    <% end %>
+    </ul>
 <hr/>
